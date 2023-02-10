@@ -1,0 +1,18 @@
+spring:
+  main:
+    banner-mode: 'off'
+  kafka:
+    bootstrap-servers: 'localhost:9192'
+    consumer:
+      auto-offset-reset: 'earliest'
+      group-id: 'rebalance-issue-consumer'
+    producer:
+      client-id: 'rebalance-issue-producer'
+application:
+  kafka:
+    topic:
+      source: 'input'
+      target: 'output'
+    retry:
+      attempts: 2
+      fixed-delay: 60000

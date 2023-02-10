@@ -1,0 +1,8 @@
+.*
+
+*.iml
+target
+
+!.gitattributes
+!.gitignore
+!.gitmodules
